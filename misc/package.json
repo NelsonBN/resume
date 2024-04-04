@@ -4,6 +4,6 @@
   },
   "name": "generate-pdf",
   "dependencies": {
-    "puppeteer": "^13.5.1"
+    "puppeteer": "^21.8.0"
   }
 }
