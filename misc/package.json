@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "node ./misc/generate-pdf.js"
+  },
+  "name": "generate-pdf",
+  "dependencies": {
+    "puppeteer": "^13.5.1"
+  }
+}
