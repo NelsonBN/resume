@@ -19,6 +19,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions: write-all
+
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v4
@@ -54,5 +56,3 @@ jobs:
           git add resume.pdf
           git commit -m "Generated PDF"
           git push
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
