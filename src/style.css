@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ===================== DEFAULT STYLES ===================== */
+
+:root {
+    --hightlight-color: #2079c7;
+    --strong-color: #000;
+    --text-color: #666;
+    --background-color: #fff;
+}
+
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html,
+main {
+    width: 100%;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 90px;
+    color: var(--strong-color);
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 16px;
+    color: var(--hightlight-color);
+}
+
+h3 {
+    font-size: 20px;
+    color: var(--hightlight-color);
+    border-bottom: 2px solid var(--hightlight-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 16px;
+    color: var(--strong-color);
+}
+
+h5,
+h5 > * {
+    font-size: 13px;
+    color: var(--hightlight-color);
+}
+h5 span {
+    font-size: 12px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.icon-mark {
+    white-space: nowrap;
+    font-size: 12px;
+}
+.icon-mark:not(:last-child) {
+    margin-right: 10px;
+}
+.icon-mark i {
+    margin-right: 5px;
+    color: var(--hightlight-color);
+}
+
+.tag {
+    display: inline-block;
+    font-size: 10px;
+    color: var(--text-color);
+    padding: 1px 3px;
+    margin-bottom: 2px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}
+
+ul {
+    padding-left: 17px;
+}
+ul li {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ===================== LAYOUT ===================== */
+
+/* ======= BASE ======= */
+
+.left {
+    float: left;
+    width: 70%;
+    padding-right: 15px;
+}
+.right {
+    float: left;
+    width: 30%;
+    padding-left: 15px;
+}
+
+
+/* ======= HEADER ======= */
+.header {
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+
+.header .right {
+    text-align: center;
+}
+
+.header .photo {
+    margin-top: 30px;
+    width: 150px;
+}
+
+.content {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/* ======= SECTION ======= */
+
+section:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+
+/* ======= ARTICLE ======= */
+
+article {
+    padding: 5px;
+    border-bottom: 1px dashed var(--text-color);
+}
+
+article:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+article > * + h6,
+article > * + ul,
+article > .inline-marks + p,
+article > h4 + p,
+article > h5 + p,
+article > *:not(h5) + .inline-marks {
+    margin-top: 10px;
+}
+
+article > h6 + *:not(.tags),
+article > h4 + h5,
+article > h5 + .inline-marks {
+    margin-top: 5px;
+}
+
+/* ======= ELEMENTS ======= */
+.button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    font-size: 12px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.button > i {
+    color: var(--hightlight-color);
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* SCREENS SMALLER THAN 768px */
+@media only screen and (max-width: 768px) {
+    .left, .right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .left {
+        margin-bottom: 15px;
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .header .right {
+        display: none;
+    }
+}
+
+/* ======= PRINT ======= */
+@page {
+    margin: 5mm;
+}
+@media only print {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 14px;
+        border-bottom-width: 1px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    .inline-marks,
+    .inline-marks .icon-mark {
+        font-size: 10px;
+    }
+
+    .tag {
+        padding: 1px 3px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 10px;
+    }
+    ul li {
+        font-size: 10px;
+    }
+
+    .header .photo {
+        margin-top: 0;
+        width: 80px;
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    .print-button {
+        display: none;
+    }
+    article {
+        page-break-inside: avoid;
+    }
+}
