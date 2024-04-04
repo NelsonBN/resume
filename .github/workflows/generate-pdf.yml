@@ -54,3 +54,5 @@ jobs:
           git add resume.pdf
           git commit -m "Generated PDF"
           git push
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
