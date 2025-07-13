@@ -11,7 +11,7 @@ updates:
     target-branch: "main"
 
   - package-ecosystem: "npm"
-    directory: "/" # Location of package manifests
+    directory: "/misc" # Location of package manifests
     schedule:
       interval: "daily"
     commit-message:
