@@ -172,11 +172,12 @@ section:not(:last-child) {
 
 article {
     padding: 5px;
-    border-bottom: 1px dashed var(--text-color);
 }
 
 article:not(:last-child) {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--text-color);
+    margin-bottom: 5px;
 }
 
 article > * + h6,
@@ -192,6 +193,9 @@ article > h6 + *:not(.tags),
 article > h4 + h5,
 article > h5 + .inline-marks {
     margin-top: 5px;
+}
+article.img {
+    text-align: center;
 }
 
 /* ======= ELEMENTS ======= */
