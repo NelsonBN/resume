@@ -44,7 +44,7 @@ jobs:
         run: node ./misc/generate-pdf.js
 
       - name: 'Upload PDF to Artifacts'
-        uses: actions/upload-artifact@v7.0.0
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: generated-pdf
           path: resume.pdf
